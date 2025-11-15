@@ -12,8 +12,6 @@ A mini e-commerce app built with **Next.js 14 (App Router)**, featuring:
 ✅ API routes for products
 ✅ Responsive UI with Tailwind CSS
 
-Perfect for showcasing in interviews or GitHub portfolio.
-
 ---
 
 ## 🚀 Live Demo (Optional)
@@ -151,10 +149,6 @@ App opens at:
 ```
 http://localhost:3000
 ```
-
----
-
-## 📹 Demo Video / GIF (Optional)
 
 ---
 
