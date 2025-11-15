@@ -130,7 +130,7 @@ Schema lives in:
 
 ```bash
 git clone https://github.com/Rachit2912/Product-Explorer.git
-cd product-explorer
+cd Product-Explorer
 ```
 
 ### 2. Install dependencies
