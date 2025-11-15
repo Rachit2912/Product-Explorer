@@ -50,7 +50,7 @@ export default async function ProductPage(props: any) {
         <div className="mt-4">
           <h2 className="text-lg font-semibold mb-2">Features</h2>
           <ul className="list-disc ml-6 space-y-1 text-sm text-gray-800">
-            {Object.entries(product.attributes).map(([key, value]) => (
+            {Object.entries(product.attributes ?? {}).map(([key, value]) => (
               <li key={key}>
                 <strong>{key}:</strong> {String(value)}
               </li>

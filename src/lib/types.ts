@@ -11,7 +11,7 @@ export const productSchema = z.object({
   imageUrl: z.string().url().optional(),
   category: z.string().optional(),
   rating: z.number().optional(),
-  inStock: z.boolean().optional(),
+  inStock: z.boolean(),
   attributes: z
     .record(z.string(), z.union([z.string(), z.boolean()]))
     .optional(),
