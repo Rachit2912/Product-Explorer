@@ -16,7 +16,7 @@ export default async function ProductPage(props: any) {
       {/* img */}
       <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow">
         <Image
-          src={product.imageUrl}
+          src={product.imageUrl ?? "@/public/file.svg"}
           alt={product.name}
           fill
           className="object-cover"
