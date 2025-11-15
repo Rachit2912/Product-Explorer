@@ -9,7 +9,7 @@ import {
 
 // reading products from my loaded .json file:
 async function loadLocalProducts(): Promise<Product[]> {
-  const filePath = path.join(process.cwd(), "src", "data", "products.json");
+  const filePath = path.join(process.cwd(), "public", "data", "products.json");
   const file = await fs.readFile(filePath, "utf-8");
 
   const json = JSON.parse(file);
