@@ -4,7 +4,7 @@ import path from "path";
 import { productSchema, productsListResponseSchema } from "@/lib/types";
 import { z } from "zod";
 
-const DATA_PATH = path.join(process.cwd(), "src", "data", "products.json");
+const DATA_PATH = path.join(process.cwd(), "public", "data", "products.json");
 
 export async function GET(req: Request) {
   try {
