@@ -2,6 +2,8 @@ import Image from "next/image";
 import { getProductById } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import AddToCartButton from "@/components/AddToCartButton";
 
 export default async function ProductPage(props: any) {
   const { id } = await props.params;
@@ -68,8 +70,8 @@ export default async function ProductPage(props: any) {
             ))}
           </ul>
         </div>
-
-        <Button className="w-full md:w-auto">Add to Cart</Button>
+        <AddToCartButton product={product} />
+        {/* <Button className="w-full md:w-auto">Add to Cart</Button> */}
       </div>
     </div>
   );

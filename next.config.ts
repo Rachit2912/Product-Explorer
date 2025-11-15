@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  productionBrowserSourceMaps: false, // Disable source maps in productioncls
+  productionBrowserSourceMaps: false,
   images: {
     remotePatterns: [new URL("https://picsum.photos/seed/**")],
   },

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Product } from "@/lib/types";
+import AddToCartButton from "@/components/AddToCartButton";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
@@ -30,6 +31,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <p className="font-bold">
             {product.currency} {product.price}
           </p>
+          <AddToCartButton product={product} />
         </CardContent>
       </Card>
     </Link>
