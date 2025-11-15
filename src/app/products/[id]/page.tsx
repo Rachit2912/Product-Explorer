@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getProductById } from "@/lib/api";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default async function ProductPage(props: any) {
   const { id } = await props.params;
@@ -13,6 +14,16 @@ export default async function ProductPage(props: any) {
 
   return (
     <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+      {/* back button */}
+      <div className="col-span-2 mb-4">
+        <Link
+          href="/"
+          className="text-blue-600 text-xl hover:underline text-sm"
+        >
+          ← Back to Products
+        </Link>
+      </div>
+
       {/* img */}
       <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow">
         <Image
