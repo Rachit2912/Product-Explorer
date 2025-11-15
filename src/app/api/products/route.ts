@@ -57,7 +57,7 @@ export async function GET(req: Request) {
       data: paginated,
     };
 
-    // parse the response shape :
+    // parse the response shape
     try {
       productsListResponseSchema.parse(response);
     } catch (err) {

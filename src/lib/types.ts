@@ -1,5 +1,6 @@
 import { z } from "zod";
 
+// schema for a single product :
 export const productSchema = z.object({
   id: z.string(),
   name: z.string(),
@@ -11,11 +12,14 @@ export const productSchema = z.object({
   category: z.string().optional(),
   rating: z.number().optional(),
   inStock: z.boolean().optional(),
-  attributes: z.record(z.string(), z.string()).optional(),
+  attributes: z
+    .record(z.string(), z.union([z.string(), z.boolean()]))
+    .optional(),
 });
 
 export type Product = z.infer<typeof productSchema>;
 
+// schema for final list for all products :
 export const productsListResponseSchema = z.object({
   page: z.number(),
   limit: z.number(),
